@@ -29,5 +29,5 @@ console.log(num3 > num4 || num3 < num4);
 
 // Feature 3: Ternary Operator Script
 let num5 = 50
-let isPositive = num21 > 0 ? 'Positive' : 'Negative'
+let isPositive = num5 > 0 ? 'Positive' : 'Negative'
 console.log(isPositive);
