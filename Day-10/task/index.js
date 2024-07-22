@@ -77,5 +77,26 @@ select.addEventListener("change", function() {
 
 // Activity 5: Event Delegation
 // Task 9: Add a click event listener to a list that logs the text content of the clicked list item using event delegation.
+listContainer.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+        console.log(event.target.textContent);
+    }
+});
 
 // Task 10: Add an event listener to a parent element that listens for events from dynamically added child elements.
+const parentElement = document.getElementById('parentElement');
+
+// Event listener on the parent element
+parentElement.addEventListener('click', function(event) {
+    if(event.target.tagName === 'BUTTON') {
+        // Handle the event from the dynamically added child button
+        alert('Button clicked!');
+    }
+});
+
+// Function to add a new child element
+document.getElementById('btnAdd').addEventListener('click', function() {
+    const newButton = document.createElement('button');
+    newButton.textContent = 'Dynamically Added Button';
+    parentElement.appendChild(newButton);
+});
