@@ -2,12 +2,19 @@
 
 // Activity 1
 //Task 1: Select an HTML element by its ID and change its text content.
-let demo = document.getElementById("demo");
-demo.innerHTML = "Meow Meow Nigga";
+let nigga = document.getElementById("nigga");
+nigga.innerHTML = "Meow Meow Nigga";
 
 //Task 2: Select an HTML element by its class and change its background color.
-let demo2 = document.getElementsByClassName("demo2");
-demo2.style.backgroundColor = "red";
+// let color = document.getElementsByClassName("color");
+// color.style.backgroundColor = "red";
+
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.color');
+    elements.forEach(element => {
+      element.style.backgroundColor = 'red';
+    });
+  });
 
 // Activity 2
 //Task 3: Create a new div element with some text content and append it to the body.
