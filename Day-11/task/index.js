@@ -8,7 +8,7 @@ const promiseOne = new Promise((resolve, reject) => {
         resolve("Promise resolved")
     }, 2000)
 })
-// • Task 2: Create a promise that rejects with an error message after a 2-second timeout and handle the error using •catch().
+// • Task 2d: Create a promise that rejects with an error message after a 2-second timeout and handle the error using •catch().
 const promiseTwo = new Promise((resolve, reject) => {
     setTimeout (function(){
         reject("Promise rejected")
