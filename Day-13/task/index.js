@@ -1,6 +1,7 @@
 //  Day 13
 
-import { add, person, multiple, subtract, name, age, deets } from './module.js';
+import { add, person, multiple, subtract } from './module.js';
+import * as Meow from './module.js';
 import divide from './module.js';
 import _ from 'lodash'; 
 import axios from 'axios'; 
@@ -18,9 +19,9 @@ console.log("Subtract",subtract(2, 3));
 console.log("Divide",divide(6, 2));
 
 // Task 5: Create a module that exports multiple constants and functions. Import the entire module as an object in another script and use its properties.
-console.log("Name",name);
-console.log("Age",age);
-console.log(deets("developer"));
+console.log("Name",Meow.name);
+console.log("Age",Meow.age);
+console.log(Meow.deets("developer"));
 
 // Task 6: Install a third-party module (e.g., lodash) using npm. Import and use a function from this module in a script.
 const arr = [1, 2, 3]; 
