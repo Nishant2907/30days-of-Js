@@ -1,27 +1,30 @@
 //  Day 13
 
-import { add, person } from './module.js';
-
+import { add, person, multiple, subtract, name, age, deets } from './module.js';
+import divide from './module.js';
+import _ from 'lodash'; 
+import axios from 'axios'; 
 // Task 1: Create a module that exports a function to add two numbers. Import and use this module in another script.
-console.log(add(2, 3)); // Output: 5
+console.log("Sum",add(2, 3)); // Output: 5
 
 // Task 2: Create a module that exports an object representing a person with properties and methods. Import and use this module in another script.
-console.log(person);
+console.log("Person says:",person.greet());
 
 // Task 3: Create a module that exports multiple functions using named exports. Import and use these functions in another script.
-// Example: export function add(a, b) { return a + b; } export function subtract(a, b) { return a - b; }
+console.log("Multiple",multiple(2, 3));
+console.log("Subtract",subtract(2, 3));
 
 // Task 4: Create a module that exports a single function using default export. Import and use this function in another script.
-// Example: export default function multiply(a, b) { return a * b; }
+console.log("Divide",divide(6, 2));
 
 // Task 5: Create a module that exports multiple constants and functions. Import the entire module as an object in another script and use its properties.
-// Example: export const PI = 3.14; export function area(radius) { return PI * radius * radius; }
+console.log("Name",name);
+console.log("Age",age);
+console.log(deets("developer"));
 
 // Task 6: Install a third-party module (e.g., lodash) using npm. Import and use a function from this module in a script.
-// Example: import _ from 'lodash'; const arr = [1, 2, 3]; console.log(_.reverse(arr));
+const arr = [1, 2, 3]; 
+console.log(_.reverse(arr));
 
 // Task 7: Install a third-party module (e.g., axios) using npm. Import and use this module to make a network request in a script.
-// Example: import axios from 'axios'; axios.get('https://api.example.com').then(response => console.log(response.data));
-
-// Task 8: Use a module bundler like Webpack or Parcel to bundle multiple JavaScript files into a single file. Write a script to demonstrate the bundling process.
-// Example: Use Webpack to bundle src/index.js and src/utils.js into dist/bundle.js
+axios.get('https://pokeapi.co/api/v2/pokemon/pikachu').then(response => console.log("Pokemon is",response.data.forms[0].name));
